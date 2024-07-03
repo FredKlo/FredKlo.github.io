@@ -162,5 +162,277 @@
  tab on the left to view all API requests for each listed module.</span></p>
 
 </body>
+<head>
 
+    <title>Corridor API Web Services</title>
+
+    <!--(Meta)==========================================================-->
+
+    <meta http-equiv=content-type content="text/html; charset=windows-1252">
+    <meta name=date content="05 29, 2003 9:57:28 AM">
+    <meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+    <meta name=generator-major-version content=0.1>
+    <meta name=generator-minor-version content=1>
+    <meta name=filetype content=kadov>
+    <meta name=filetype-version content=1>
+    <meta name=page-count content=1>
+    <meta name=layout-height content=676>
+    <meta name=layout-width content=1018>
+
+
+    <!--(Links)=========================================================-->
+
+    <link rel=StyleSheet href="corridorHelp.css">
+    
+    <style>
+        ol, p, table { margin-bottom: 10px; }
+    </style>
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+    <h1>Corridor API Web Services</h1>
+    <h2>List Of Services</h2>
+    <p>Each web service corresponds to a CORRIDOR module and its related APIs. Replace machinename with the virtual name of the CWS host.</p>
+
+    <table>
+        <tr>
+            <td>Accounting</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/accounting.asmx </td>
+        </tr>
+        <tr>
+            <td>Aircraft Ownership</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/aircraftownership.asmx </td>
+        </tr>
+        <tr>
+            <td>Contact Profile</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/contactprofile.asmx </td>
+        <tr></tr>
+
+        <td>Customer Database</td>
+        <td>&nbsp;</td>
+        <td>http://machinename/cws/customerdatabase.asmx </td>
+        <tr>
+            <td>Line Sales</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/linesales.asmx </td>
+        </tr>
+        <tr>
+            <td>Inventory</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/partmaster.asmx </td>
+        </tr>
+        <tr>
+            <td>Part/Service Request</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/partservice.asmx </td>
+        </tr>
+        <tr>
+            <td>Receiving</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/receiving.asmx </td>
+        </tr>
+        <tr>
+            <td>Sales Invoice</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/salesinvoice.asmx </td>
+        </tr>
+        <tr>
+            <td>Sales Order</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/salesorder.asmx </td>
+        </tr>
+        <tr>
+            <td>Session</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/session.asmx </td>
+        </tr>
+        <tr>
+            <td>Shipping</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/shipping.asmx </td>
+        </tr>
+        <tr>
+            <td>System</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/systemservice.asmx </td>
+        </tr>
+        <tr>
+            <td>User Management</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/usermanagement.asmx </td>
+        </tr>
+        <tr>
+            <td>User Security Groups</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/usersecuritygroups.asmx </td>
+        </tr>
+        <tr>
+            <td>Work Order</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/workorder.asmx </td>
+        </tr>
+        <tr>
+            <td>Work Order Quote</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/workorderquote.asmx </td>
+        </tr>
+        <tr>
+            <td>Work Pak</td>
+            <td>&nbsp;</td>
+            <td>http://machinename/cws/workpak.asmx </td>
+        </tr>
+    </table>
+
+    <h2>Authenticating Web Service Requests</h2>
+
+    <p>In addtion to each request's input fields, the request must be authenticated by one of the following two methods:</p>
+    
+    <h3>Method 1: Provide CORRIDOR user credentials for each request</h3>
+    <p>
+        With this method, the user credentials must be specified in each individual request sent to the web service.
+        This method is preferred if only sending a single request.
+    </p>
+    <p>The additional fields that must be provided in the request include:</p>
+    <table cellpadding="3" width="700" border="1" cellspacing="0" style="font-size: 12px;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Notes/Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AliasName</td>
+                <td>The CORRIDOR database alias name.</td>
+            </tr>
+            <tr>
+                <td>LoginID</td>
+                <td>The CORRIDOR user name.</td>
+            </tr>
+            <tr>
+                <td>LoginPassword</td>
+                <td>The CORRIDOR user's password.</td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+    <h3>Method 2: Use the Session web service to establish a user session</h3>
+    <p>
+        With this method, the Session web service is used to establish a session with CWS.
+        This is the preferred method if making a batch of requests to CWS. Performance gains
+        are very substantial over providing credentials with each request (method 1).
+    </p>
+    <p>
+        NOTE: Sessions expire after a configurable amount of time.
+    </p>
+    <p>Using this method, the only additional field required to authenticate other requests is:</p>
+    <table cellpadding="3" width="700" border="1" cellspacing="0" style="font-size: 12px;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Notes/Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SessionToken</td>
+                <td>Returned from the Session service's Login method (see below).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>The steps in using this method are:</p>
+    <ol style="font-size: 12px;">
+        <li>Establish the session by calling the Login method of the Session web service. Store the session token returned.</li>
+        <li>Call multiple other API requests, providing the session token as the credentials.</li>
+        <li>End the session by calling the Logout method of the Session web service.</li>
+    </ol>
+    <h4>Session Login Request</h4>
+    <p>Given user credentials, returns a token that can be used for authenticating subsequent requests.</p>
+    <h5>Request Data Fields</h5>
+    <table cellpadding="3" width="700" border="1" cellspacing="0" style="font-size: 12px;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Notes/Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AliasName</td>
+                <td>The CORRIDOR database alias name.</td>
+            </tr>
+            <tr>
+                <td>LoginID</td>
+                <td>The CORRIDOR user name.</td>
+            </tr>
+            <tr>
+                <td>LoginPassword</td>
+                <td>The CORRIDOR user's password.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h5>Response Data Fields</h5>
+    <table cellpadding="3" width="700" border="1" cellspacing="0" style="font-size: 12px;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Notes/Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SessionToken</td>
+                <td>The token that can be used to authenticate subsequent requests.</td>
+            </tr>
+            <tr>
+                <td>StatusMessage</td>
+                <td>Success/Failed.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Session Logout Request</h4>
+    <p>Given the session token returned from the Login request, ends the user session.</p>
+    <h5>Request Data Fields</h5>
+    <table cellpadding="3" width="700" border="1" cellspacing="0" style="font-size: 12px;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Notes/Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SessionToken</td>
+                <td>The token identifying the session to be ended. The session token will become invalid.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h5>Response Data Fields</h5>
+    <table cellpadding="3" width="700" border="1" cellspacing="0" style="font-size: 12px;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Notes/Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>StatusMessage</td>
+                <td>Success/Failed.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+ 
 </html>
