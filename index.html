@@ -1,7 +1,166 @@
 <!DOCTYPE html>
 <html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Corridor API Documentation</title>
+
+<!--(Meta)==========================================================-->
+
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1416>
+<meta name=layout-width content=843>
+<meta name=date content="05 4, 2004 5:27:00 PM">
+
+
+<!--(Links)=========================================================-->
+
+<link rel=StyleSheet href=corridorHelp.css>
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages. test update</p>
+
+<h1>Corridor API Documentation</h1>
+
+<p style="font-weight: bold; font-size: 12pt;">Overview</p>
+
+<p style="font-weight: bold;">&nbsp;</p>
+
+<p style="margin-left: 40px;">Corridor API is a programming interface to
+ the Corridor business logic and to the Corridor back-end Oracle database.
+ The API is distributed as a Win32 lib file named CorridorAPI.lib which
+ contains dynamically-linked libraries for the APIs and the Corridor business
+ logic. Supporting header files for C++ classes and other define files
+ are included in the distribution as well. Interfacing with the APIs is
+ through linking the library with an application. Applications interfacing
+ with the APIs do not require MFC. The APIs do not have any UI aspects
+ of their own.</p>
+
+<p>&nbsp;</p>
+
+<p style="margin-left: 40px;">The Corridor API can be used with Java applications
+ as well. A Java wrapper through the Java Native Interface is also provided
+ for the APIs. The process of using the APIs with the Java applications
+ is well described through the example code and in further paragraphs.</p>
+
+<p style="margin-left: 40px;">&nbsp;</p>
+
+<p style="margin-left: 0px;"><span style="font-weight: bold;">Conventions</span></p>
+
+<p style="margin-left: 40px;">&nbsp;</p>
+
+<p style="margin-left: 40px;">Unless otherwise stated, all String type
+ data is 255 characters in length. When a data object is described as &quot;Must
+ be valid&quot; this means that the value you are entering must exist in
+ the database in the proper tables that hold objects of the type you are
+ attempting to pass.</p>
+
+<p style="margin-left: 40px;">&nbsp;</p>
+
+<p style="font-weight: bold;">High-level Design</p>
+
+<p style="font-weight: bold;">&nbsp;</p>
+
+<p style="margin-left: 40px;">The APIs are designed to be generic and process
+ oriented. They work with request and response objects. A request object
+ contains a request type and a request data payload. The request type is
+ string data and the request payload is a group of primitive data types
+ like string, int, long, boolean, etc. The request object is processed
+ and response object is returned in a synchronous manner. A response object
+ contains a success or failure status flag, response data and/or error
+ data. The response data is similar to the request payload. It is a collection
+ of primitive data. The error data reported consists of one or more errors.
+ Each error has an <a href="ErrorCodes/Errors.htm">error code</a> and
+ error text. The request and response object format can be a Map (i.e.
+ collection of name-value pairs), XML, etc…</p>
+
+<p style="margin-left: 40px;">&nbsp;</p>
+
+<p style="font-weight: bold;">Session Oriented</p>
+
+<p style="font-weight: bold;">&nbsp;</p>
+
+<p style="margin-left: 40px;">Interacting with APIs is session oriented.
+ A session is initiated via a login process. The database schema name,
+ user name and user password is required for the login, which authenticates
+ the user and establishes the user authorizations based on the permissions
+ setup for the user. Permissions are established at the initiation of the
+ session. Any changes made to a user's permissions while the session is
+ still active will not be reflected until the current session has ended,
+ and a new session has been initiated. The Corridor API user passwords have
+ distinct encryption. A utility method is provided to generate the passwords.
+ Passwords created in the APIs will not be compatible with passwords created
+ in the Corridor UI unless they are passed through the encryption utility.</p>
+
+<p>&nbsp;</p>
+
+<p style="font-weight: bold;">Transaction Support</p>
+
+<p style="font-weight: bold;">&nbsp;</p>
+
+<p style="margin-left: 40px;">Within a session one or more requests can
+ be processed. Each request processing verifies the user privileges established
+ during the login. Each request process corresponds to a transaction. On
+ the successful processing of an add/update request, the data is committed.
+ If the request throws an error the data is rolled back. This makes the
+ sessions stateless.</p>
+
+<p style="margin-left: 40px;">&nbsp;</p>
+
+<p style="margin-left: 0px; font-weight: bold;"><a HREF="Sample_Code/Using_APIs_With_Java_Wrapper.htm">Using
+ APIs Through Java</a></p>
+
+<p style="margin-left: 0px;">&nbsp;</p>
+
+<p style="margin-left: 40px;">The process for using the APIs through a
+ Java Application is via Java wrapper classes that invoke the C and C++
+ methods of the APIs. The <a href="Sample_Code/Request_and_Response_Maps.htm">request
+ and response data</a> from the Java objects are translated to the C++
+ objects <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->to
+ service the API requests. This is accomplished via a Java native interface
+ DLL file, RitaJNI.dll, created to support such access. You will need to
+ update the PATH environment variable on your system to include the path
+ to the DLL file.</p>
+
+<p style="margin-left: 40px;">&nbsp;</p>
+
+<p style="margin-left: 40px;">The Java wrapper constitutes of a primary
+ class, com.continuum.api.RitaSession, which encapsulates the StartNewSession
+ (), EndSession () and ProcessRequest () methods of the C++ APIs described
+ earlier. Also the Java java.util.Map and java.util.List are used in place
+ of C++ data objects namely, CRitaMap and CRitaArray. The following example
+ code illustrates processing of GetUserRequest and a few code snippets
+ to be used in one or more classes/methods as per your design. The session
+ object can be constructed in a class and the generation of request data,
+ sending the request using the session object and processing the reprocessing
+ of the response data may be in a different class or classes.</p>
+
+<p style="margin-left: 40px;">&nbsp;</p>
+
+<p style="font-weight: bold;">API Organization By Module</p>
+
+<p>&nbsp;</p>
+
+<p style="font-weight: bold; margin-left: 40px;"><span style="font-weight: normal;">APIs
+ are organized by Corridor module. Each API is used to manipulate, add, and
+ get data that is pertinent to each module inside of Corridor. Use the Contents
+ tab on the left to view all API requests for each listed module.</span></p>
+
 </body>
+
 </html>
