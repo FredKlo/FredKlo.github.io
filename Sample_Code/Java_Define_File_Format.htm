@@ -1,0 +1,957 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Java Define File Format</title>
+
+<!--(Meta)==========================================================-->
+
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=5605>
+<meta name=layout-width content=855>
+<meta name=date content="06 1, 2003 2:30:51 PM">
+
+
+<!--(Links)=========================================================-->
+
+<link rel=StyleSheet href="../corridorHelp.css">
+
+
+
+ </head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1>Java Define File Format</h1>
+
+<p>Like C++ defines header files corresponding java defines are in the 
+ following files. Below is an example of the WorkOrderDefines.java file. 
+ All Java define files are written with well formed comments that are extracted 
+ to a corridor-api-javadocs file. </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+<p style="font-style: italic;">package com.continuum.api;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->The 
+ IWorkOrderDefines interface contains the schema tag names for</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->accessing 
+ Work Order data. &lt;br&gt;</p>
+
+<p style="font-style: italic;">*/</p>
+
+<p style="font-style: italic;">public interface IWorkOrderDefines</p>
+
+<p style="font-style: italic;">{</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ =============================================================================</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ Supported Request Types</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ =============================================================================</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/ 
+ </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->public 
+ interface Requests</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->{</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;AddWorkOrderLaborRequest&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ The response data for this request contains the formatted work order </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ full number, WOLaborFullNumber, and work order labor key, WOLaborKey.</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ The Key value can be used as request data for the UpdateWordOrderLaborRequest 
+ </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ in place of the path map data.</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String ADD_WO_LABOR_REQUEST <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;AddWorkOrderLaborRequest&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;UpdateWorkOrderLaborRequest&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ The response data for this request contains the formatted work order </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ full number, WOLaborFullNumber, and work order labor key, WOLaborKey.</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ The Key value can be used as request data for the UpdateWordOrderLaborRequest</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ in place of the path map data.</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String UPDATE_WO_LABOR_REQUEST <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;UpdateWorkOrderLaborRequest&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;MoveWorkOrderLaborRequest&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ The response data for this request contains the formatted work order </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ full number, WOLaborFullNumber, and work order labor key, WOLaborKey.</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ The Key value can be used as request data for the UpdateWordOrderLaborRequest</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ in place of the path map data.</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String MOVE_WO_LABOR_REQUEST <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;MoveWorkOrderLaborRequest&quot;;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->}</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ =============================================================================</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ Request Path Tag</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ =============================================================================</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->public 
+ interface Path</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->{</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WONumber&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Long &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_NUMBER <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WONumber&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOItemNumber&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Long &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_ITEM_NUMBER <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOItemNumber&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOSquawkNumber&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Long &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_SQUAWK_NUMBER <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOSquawkNumber&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOStepNumber&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Long &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_STEP_NUMBER <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOStepNumber&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOSteps&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Label for a collection of step numbers for path &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_STEPS <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOSteps&quot;;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->}</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ =============================================================================</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ Schema Names</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ =============================================================================</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ =============================================================================</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ Work Order Labor Schema Names</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->The 
+ add request data for the Work Order Labor API must include a path map 
+ data. </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->The 
+ update request data must either include WOLaborKey data or a path map 
+ data </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->if 
+ the key is not used. The move request data must include a from path and 
+ a to</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->path 
+ map data. &lt;br&gt;&lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->The 
+ path map should contains the Work#, Item#, Squawk# and zero or more Step#s. 
+ For the </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->constants 
+ for the path tag names see &lt;a href=&quot;ICommonDefines.html&quot;&gt;ICommonDefines&lt;/a&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->E.g. 
+ for the Add or Update Work Order Labor request the RITA_DATA_PATH <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->holds 
+ the </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->path 
+ info. For Move Work Order Labor request the RITA_DATA_FROM_PATH and </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->RITA_DATA_TO_PATH 
+ are defined to hold the source and destination info. </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->The 
+ data contained in the path maps are defined under </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&lt;a 
+ href=&quot;IWorkOrderDefines.Path.html&quot;&gt;IWorkOrderDefines.Path&lt;/a&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->E.g. 
+ WO_NUMBER, WO_ITEM_NUMBER, etc.</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->As 
+ an example, the request data structure for Add request will be like:</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&lt;pre&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->RequestMap 
+ = </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->[</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->{RITA_DATA_PATH, 
+ &amp;ltPathMap&amp;gt},</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->{WO_LABOR_PERFORMED_BY, 
+ &quot;username&quot;},</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->{WO_LABOR_COMMENTS, 
+ &quot;some comments&quot;},</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->{etc., 
+ etc.}</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->]</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->where 
+ &amp;ltPathMap&amp;gt is another Map as,</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->PathMap 
+ = </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->[</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->{WO_NUMBER, 
+ WorOrder#},</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->{WO_ITEM_NUMBER, 
+ Item#},</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->{WO_SQUAWK_NUMBER, 
+ Squawk#},</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->{WO_STEPS, 
+ &amp;ltStepsList&amp;gt}</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->]</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&lt;/pre&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Since 
+ the Work Order Labor can be added to a squawk or a step. The WO_STEPS 
+ </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->entry 
+ in the PathMap is optional. But if add labor to one or more steps then 
+ </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->it 
+ must be provided in an list; <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->so 
+ &amp;ltStepsList&amp;gt is a list of steps as, &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->StepsList 
+ = [Step1#, Step2#,...] &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->&lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Use 
+ java.util.Map and java.util.List to build this structure. </p>
+
+<p style="font-style: italic;">*/</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->public 
+ interface WorkOrderLabor</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->{</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ String data (required)</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborPerformedBy&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String, Max Length = 255 chars &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Must have non-null value &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Must be unique for a Work Order, Item, Squawk/Step(s)&lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_PERFORMED_BY <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborPerformedBy&quot;;</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ String data</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborPostingProfile&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String, Max Length = 255 chars &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_POSTING_PROFILE <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborPostingProfile&quot;;</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ String data (big)</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborComments&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String, Max Length = 2000 chars &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_COMMENTS <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborComments&quot;;</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ Number data (required)</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborNumber&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Long &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Must have non-null value &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Must be unique for a Work Order#, Item#, Squawk/Step(s)#&lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_NUMBER <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborNumber&quot;;</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ Long data</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborKey&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Long &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Is a read-only field. Is returned in response data for the labor requests 
+ &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ The key value can be included in request data in place of the WOPath map 
+ data </p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ for Update requests.&lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_KEY <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborKey&quot;;</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;">// String data (read-only)</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborPricingProfileName&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String, Max Length = 255 chars &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Is read-only field &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_PRICING_PROFILE_NAME <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborPricingProfileName&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborFullNumber&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String, Max Length = 255 chars &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Is read-only field. Is returned in response data for the labor requests 
+ &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_FULL_NUMBER <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborFullNumber&quot;;</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;">// Number data (read only)</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborEnteredVia&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Integer &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Is read-only field &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_ENTERED_VIA <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborEnteredVia&quot;;</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;">// Number data</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborBreak&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Double &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_BREAK <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborBreak&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborLunch&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Double &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_LUNCH <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborLunch&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborAdjustment&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Double &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_ADJUSTMENT <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborAdjustment&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborTotalTime&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Double &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_TOTAL_TIME <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborTotalTime&quot;;</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;">// Date data</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborStartDate&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String format: 'mm/dd/yyyy HH.mm.ss' &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ @deprecated use WO_LABOR_START_DATE_TIME instead</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_START_DATE <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborStartDate&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborEndDate&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String format: 'mm/dd/yyyy HH.mm.ss' &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ @deprecated use WO_LABOR_END_DATE_TIME instead</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_END_DATE <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborEndDate&quot;;</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;">// Date time data</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborStartDateTime&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String format: 'mm/dd/yyyy HH.mm.ss' &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_START_DATE_TIME <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborStartDateTime&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborEndDateTime&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String format: 'mm/dd/yyyy HH.mm.ss' &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_END_DATE_TIME <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborEndDateTime&quot;;</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;">// Currency data</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborRate&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Double &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_RATE <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborRate&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborAverageCost&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Double &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_AVERAGE_COST <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborAverageCost&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborActualCost&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Double &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_ACTUAL_COST <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborActualCost&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborAverageBurdenCost&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Double &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_AVERAGE_BURDEN_COST <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborAverageBurdenCost&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborActualBurdenCost&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Double &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_ACTUAL_BURDEN_COST <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborActualBurdenCost&quot;;</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;">// Currency data (read only)</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborPrice&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Double &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Is read-only field &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_PRICE <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborPrice&quot;;</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;">// Boolean data</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborCustomizePostingDefinition&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Boolean &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_CUSTOMIZE_POSTING_DEFINITION 
+ <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->= &quot;WOLaborCustomizePostingDefinition&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborUsePricingProfile&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Boolean &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_USE_PRICING_PROFILE <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborUsePricingProfile&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborUseLaborRate&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Boolean &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_USE_LABOR_RATE <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborUseLaborRate&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborUseAverageLabor&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Boolean &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_USE_AVERAGE_LABOR <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborUseAverageLabor&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborUseActualLabor&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.Boolean &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_USE_ACTUAL_LABOR <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborUseActualLabor&quot;;</p>
+
+<p style="font-style: italic;">// ======================================</p>
+
+<p style="font-style: italic;">// String value data</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborBillingMethod&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_BILLING_METHOD <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborBillingMethod&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborCostMethod&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_COST_METHOD <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborCostMethod&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;Regular&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Is one of the 3 values for WO_LABOR_BILLING_METHOD or WO_LABOR_COST_METHOD</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_REGULAR_METHOD <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;Regular&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;Overtime&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Is one of the 3 values for WO_LABOR_BILLING_METHOD or WO_LABOR_COST_METHOD</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_OVERTIME_METHOD <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;Overtime&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;DoubleTime&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Is one of the 3 values for WO_LABOR_BILLING_METHOD or WO_LABOR_COST_METHOD</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_DOUBLE_TIME_METHOD <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;DoubleTime&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;WOLaborPricingMethod&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_PRICING_METHOD <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;WOLaborPricingMethod&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;PricingProfile&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Is one of the 2 values for WO_LABOR_PRICING_METHOD</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_PRICING_PROFILE_METHOD = 
+ &quot;PricingProfile&quot;;</p>
+
+<p style="font-style: italic;">/**</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Tag name = &quot;LaborRate&quot; &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Type = java.lang.String &lt;br&gt;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->* 
+ Is one of the 2 values for WO_LABOR_PRICING_METHOD</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->*/</p>
+
+<p style="font-style: italic;">String WO_LABOR_RATE_METHOD <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->= 
+ &quot;LaborRate&quot;;</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->}</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ =============================================================================</p>
+
+<p style="font-style: italic;"><!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->// 
+ =============================================================================</p>
+
+<p style="font-style: italic;">}</p>
+
+<p style="font-style: italic;">&nbsp;</p>
+
+<p style="font-style: normal;">Return to <a HREF="Sample_Code.htm"
+											style="font-style: normal;">Sample 
+ Code Root</a></p>
+
+</body>
+
+</html>
