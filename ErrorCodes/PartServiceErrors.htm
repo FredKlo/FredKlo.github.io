@@ -1,0 +1,843 @@
+<html>
+  <head>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+    <link href="../Cws.css" type="text/css" rel="stylesheet">
+    <title></title>
+  </head>
+  <body><font class="clsMethodName"><h1>Part / Service Request</h1></font>
+    <table cellpadding="0" width="100%" border="1" cellspacing="0">
+      <tr class="clsDetailHeadings">
+        <th>
+          <br>Error Code
+          <br>
+          <br>
+        </th>
+        <th>
+          <br>Error Text and Description
+          <br>
+          <br>
+        </th>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040001&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Sql error.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040002&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Purchase Request module is not licensed, can't process any API requests.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040003&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Part number is required to add\\update a purchase request for parts.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040004&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid manufacturer company code: %s to %s purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040005&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid part condition : %s to %s purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040006&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid unit of measure: %s to %s purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040007&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid vendor code: %s to %s purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040008&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid customer code: %s to %s purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040009&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid billing address title: %s for customer: %s to %s purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040010&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid ship to company code: %s to %s purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040011&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid shipping address title: %s for customer %s to %s purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040012&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid requesting user name: %s to %s purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040013&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid approved by: %s to %s purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040014&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid modified part number: %s to %s purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040015&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid locator user name: %s to %s purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040016&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid request number: %s to %s purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040017&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid request line item number: %s to %s purchase request line item.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040018&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>An invalid request number was passed.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040019&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>The line item number must be blank to add a purchase request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040020&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>%s&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040021&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Lot is required to add/update a purchase request for a service if the part is pulled from inventory.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040022&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>A service description is required to add\\update a purchase request for a service.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040023&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>The part location is required to add\\update a purchase request for a service if the part is not pulled from inventory.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040024&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Part list price is required to add\\update a purchase request for parts.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040025&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Part description is required to add\\update a purchase request for parts.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040026&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>The canceled quantity may not be less than zero.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040027&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>A valid required date is required to add\\update a purchase request for parts.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040028&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>%s&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040029&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>A valid puchase request number and line item are requred to update.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040030&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Request is already approved.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040031&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid purchase request type.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040032&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid purchasing group name: %s to %s.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040033&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Approval type is required to approve/decline request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040034&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>User defined field validation failure - missing one or more required user defined fields data to add.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040035&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>This part master can not be purchased.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040036&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Cannot delete purchase request. Error message: '%s '.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040037&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid user '%s '.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040038&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid purchasing group '%s '.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040039&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>User '%s ' is not a locator.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040040&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Approval type cannot be empty.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040041&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Approval type description cannot be empty.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040042&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Approval type '%s' exists.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040043&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Purchasing group cannot be empty.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040044&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>User cannot be empty.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040045&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Purchasing group '%s' exists.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040047&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>The quantity requested may not be less than zero.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040048&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>The quantity to service may not be less than zero or zero if adding a new request.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040049&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid Work Order Part path.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040050&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid Work Order Service path.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040051&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Quantity requested exceeds outstanding demand quantity.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040052&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Requested part number does not match demand part number.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040053&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Requested service does not match demand service.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040054&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid sales order number %d detail %d.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040055&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid purchase request type for sales order.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040056&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Purchase request association may not be updated.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040057&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid purchase request type for work order.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040058&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Purchase request can only be associated to one sales order, work order part, or work order service.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040059&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid work order part or service path.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040060&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid lot acquisition data.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040061&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>At least one lot is required to acquire purchase request from inventory.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040062&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Formatted lot number is required to specify from which lot to acquire inventory.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040063&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Invalid quantity to acquire.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="clsDetailItem">
+        <td align="center">1040064&nbsp;						
+						</td>
+        <td>
+          <table>
+            <tr class="clsDetailItem">
+              <td width="35" class="clsDetailStatic">Text:</td>
+              <td>Lot number is invalid to acquire inventory.&nbsp;
+										</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <br><font class="clsDetailItem">Back to <a href="../generated/PartService.htm">Part / Service Request Module </a> / <a href="Errors.htm">Error Codes</a></font></body>
+</html>
