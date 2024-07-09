@@ -1,29 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-
-
-
-<div id="sidebar_container">
-
- 
-function loadComponentFromFile(filepath, location) {
-   var client = new XMLHttpRequest();
-   client.open('GET', filepath);
-   client.onreadystatechange = function() {
-        location.innerHTML = client.responseText;
-   }
-   client.send();
- }
-
- var sidebar_container = document.getElementById("sidebar_container");
- var content = loadComponentFromFile('./sidebar.html', sidebar_container);
-
- 
-</div>
-
-
-<div id="indexMain">
 <!--(==============================================================)-->
 <!--(Document created with RoboEditor. )============================-->
 <!--(==============================================================)-->
@@ -456,7 +433,6 @@ function loadComponentFromFile(filepath, location) {
         </tbody>
     </table>
 </body>
-</div>
 
 
 
