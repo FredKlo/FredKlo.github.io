@@ -93,11 +93,7 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
- document.onclick = function(e){
-            if (!mySidenav.contains(e.target) && !mySidenav.contains(e.target) ) {
-                document.getElementById("mySidenav").style.width = "0";
-            }
-        }
+document.body.addEventListener("click", e => sidebar.style.display = "none")
 
 </script>
    
