@@ -1,0 +1,1104 @@
+<HTML>
+  <HEAD>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+    <LINK href="../Cws.css" type="text/css" rel="stylesheet">
+    <TITLE></TITLE>
+  </HEAD>
+  <BODY><font class="clsMethodName">AddPartServiceRequest</font>
+    <ul>
+      <br><font class="clsMethodHeadings">Description </font>
+        <ul>
+          <br><font class="clsDetailItem"> 
+            This request creates a part/service request in the Part/Service Request module.
+            </font></ul>
+      
+      <br><font class="clsMethodHeadings">Preconditions </font>
+        <ul>
+          <br><font class="clsDetailItem">
+            User must have proper permissions to create parts and services.
+            </font></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Input Data</font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Applicable to part requests or service requests for a part.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PurchaseRequestMasterNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Required if no PurchaseRequestFormattedNumber is sent.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartDescription</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>This field is automaticaly filled if the PartNumber is in the part master database.
+                          It is required if the PartNumber is not in the part master database.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartManufacturerCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>This field is automaticaly filled if the PartNumber is in the part master database.
+                          The value may be set if the PartNumber is not in the part master database.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartCondition</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Applicable to part requests or service requests for a part.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UnitOfMeasure</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>VendorCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>This field is automaticaly filled if the PartNumber is in the part master database.
+                          The value may be set if the PartNumber is not in the part master database.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LocatorUserName</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PurchasingGroupName</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>QuotedPrice</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>DeliveryPoint</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>RequiredDate</td>
+              <td>DateTime
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Format = MM/DD/YYYY
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PromisedDate</td>
+              <td>DateTime
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Format = MM/DD/YYYY HH:MM:SS
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>RequestedDate</td>
+              <td>DateTime
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Format = MM/DD/YYYY HH:MM:SS
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LineItemComments</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>2000
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartListPrice</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+            Applicable to service requests only. This field is automaticaly filled if the PartNumber is in the part master database.
+                          It is required if the PartNumber is not in the part master database.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>QuantityRequested</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServiceDescription</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Applicable to service requests only.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServiceQuantityRequested</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Applicable to service requests only.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServicePurchased</td>
+              <td>DateTime
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Format = MM/DD/YYYY HH:MM:SS
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CurrentLocation</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WorkInstructions</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>Clob
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>QualityRequirements</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>Clob
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LotNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Required if PullFromInventory = True and FormattedLotNumber is empty.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LotNumberExtension</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Required if PullFromInventory = True and FormattedLotNumber is empty.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FormattedLotNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Required if PullFromInventory = True and LotNumber,LotNumberExtension are empty.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>SerialNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ModifiedPartNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Applicable to service requests only.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FurtherServiceContactName</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Applicable to service requests only.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ShippingInstructions</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>2000
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ItemName</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Applicable to misc requests only.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ItemDescription</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Applicable to misc requests only.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>RequestDescription</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Applicable when PurchaseRequestType is PurchaseRequestTypeAccountOwed.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UserDefinedFields</td>
+              <td><a href="#AddPartServiceRequestUserDefinedField">Array of UserDefinedField</a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Options determine required state.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>IsAOG</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PullFromInventory</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>IsFurtherServiceRequired</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PurchaseRequestType</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Must be one of the following: PurchaseRequestTypePart, PurchaseRequestTypeService, 
+            PurchaseRequestTypeMiscItem, PurchaseRequestTypeAccountOwed
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Path</td>
+              <td><a href="#AddPartServiceRequestPath">Path</a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Required to associate with work order part or service demand.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WorkOrderPartNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Required to associate with work order part demand.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WorkOrderServiceNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Required to associate with work order service demand.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>AssocSalesOrderNumber</td>
+              <td>Int64
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Required to associate with sales order line item.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>AssocSalesOrderDetailNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Required to associate with sales order line item.
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br>
+      <br>
+        <ul><a name="AddPartServiceRequestPath"></a>Path
+          <br>
+          <br>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WONumber</td>
+              <td>Long
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Either/or relationship with FormattedWorkOrderNumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOItemNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Must be used with WONumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOSquawkNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Must be used with WOItemNumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOSteps</td>
+              <td><a href="#WOSteps">Array of </a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Collection of step numbers for path.
+                <br>
+              </td>
+            </tr>
+          </table>
+          <br><a name="AddPartServiceRequestUserDefinedField"></a><font class="clsDetailSubHeadings">UserDefinedField<br><br><br></font>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Label</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Data</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Options determine required state and validation.
+                <br>
+              </td>
+            </tr>
+          </table>
+          <br><font class="clsDetailSubHeadings"><a href="../Sample_Code/Nested_Structures.htm">Working with data structures and arrays</a></font></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Returned Data/Return Type </font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>Type</th>
+              <th>Value</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StatusMessage</td>
+              <td>
+				&nbsp;
+			</td>
+              <td>Success/Failed
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PurchaseRequestMasterNumber</td>
+              <td>Integer
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LineItemNumber</td>
+              <td>Integer
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PurchaseRequestFormattedNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br><font class="clsMethodHeadings">Possible Error Codes </font>
+        <br>
+        <br>
+        <ul><font class="clsDetailItem"><a href="../ErrorCodes/PartServiceErrors.htm">Part / Service Request Error codes</a></font></ul>
+      
+    </ul>
+    <br>
+    <br><font class="clsDetailItem">Back to <a href="PartService.htm">Part / Service Request</a></font></BODY>
+</HTML>
