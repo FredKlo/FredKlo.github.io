@@ -1,0 +1,831 @@
+<HTML>
+  <HEAD>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+    <LINK href="../Cws.css" type="text/css" rel="stylesheet">
+    <TITLE></TITLE>
+  </HEAD>
+  <BODY><font class="clsMethodName">SelectInvoiceMasterRequest</font>
+    <ul>
+      <br><font class="clsMethodHeadings">Description </font>
+        <ul>
+          <br><font class="clsDetailItem"> 
+            This request selects a sales invoice in the Sales Invoice module
+            </font></ul>
+      
+      <br><font class="clsMethodHeadings">Preconditions </font>
+        <ul>
+          <br><font class="clsDetailItem">
+            User must have proper permissions to select sales invoices.
+            </font></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Input Data</font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>InvoiceNumber</td>
+              <td>Long
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Either/or relationship with FormattedInvoiceNumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FormattedInvoiceNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>*
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Either/or relationship with InvoiceNumber.
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br>
+      <br>
+        <ul></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Returned Data/Return Type </font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>Type</th>
+              <th>Value</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StatusMessage</td>
+              <td>
+				&nbsp;
+			</td>
+              <td>Success/Failed
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>InvoiceNumber</td>
+              <td>Long
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FormattedInvoiceNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CustomerCompanyCode</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Department</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PaymentType</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>SpecialPricingProgram</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ShippingAddressTitle</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>BillingAddressTitle</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ShippingPhoneTitle</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>BillingPhoneTitle</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CarrierCode</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ShipToCompanyCode</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>TaxCode</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PostingProfile</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PaymentComments</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CreditCardAuthorizationNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CreditCardName</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ShippingAddress</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>BillingAddress</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ShippingPhoneNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>BillingPhoneNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CarrierAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ARAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>COSVarianceAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>InsuranceAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FreightAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StorageCOSAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StorageCOSVarianceAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StorageAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StorageSalesAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FuelCOSAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FuelCOSVarianceAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FuelSalesAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CateringCOSAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CateringCOSVarianceAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CateringAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CateringSalesAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>MiscCOSAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>MiscCOSVarianceAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>MiscAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>MiscSalesAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PaymentTerms</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UserDefinedFields</td>
+              <td><a href="#SelectInvoiceMasterUserDefinedField">Array of UserDefinedField</a></td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Comments</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ShippingInstructions</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>BatchNumber</td>
+              <td>Long
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FreightCost</td>
+              <td>Double
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>InsuranceCost</td>
+              <td>Double
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>AOG</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CustomizePostingDef</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>TaxExempt</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CustomerPaysFreight</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FreightTaxable</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CreatedDate</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CustomerWorkOrderNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CustomerPurchaseOrderNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CustomerClass</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FolioNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>RecurringInvoiceName</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CustomerName</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CreatedBy</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>TaxPercentage</td>
+              <td>Double
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Taxes</td>
+              <td>Double
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>SubTotal</td>
+              <td>Double
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Total</td>
+              <td>Double
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Completed</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Closed</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CashCustomer</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CreditCheckPerformed</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OnAccount</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CashPayment</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CreditCardPayment</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ClosedDateTime</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PostedDateTime</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>TaxTypeName</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FreightTaxClassName</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>InsuranceTaxClassName</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br><a name="SelectInvoiceMasterUserDefinedField"></a><font class="clsDetailSubHeadings">UserDefinedField<br>  <br><br></font>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>Type</th>
+              <th>Value</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Label</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Data</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>Options determine required state and validation.
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br><font class="clsMethodHeadings">Possible Error Codes </font>
+        <br>
+        <br>
+        <ul><font class="clsDetailItem"><a href="../ErrorCodes/SalesInvoiceErrors.htm">Sales Invoice Error codes</a></font></ul>
+      
+    </ul>
+    <br>
+    <br><font class="clsDetailItem">Back to <a href="SalesInvoice.htm">Sales Invoice</a></font></BODY>
+</HTML>
