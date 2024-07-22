@@ -1,0 +1,668 @@
+<HTML>
+  <HEAD>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+    <LINK href="../Cws.css" type="text/css" rel="stylesheet">
+    <TITLE></TITLE>
+  </HEAD>
+  <BODY><font class="clsMethodName">GetUserRequest</font>
+    <ul>
+      <br><font class="clsMethodHeadings">Description </font>
+        <ul>
+          <br><font class="clsDetailItem"> 
+            This request gets a user in Corridor.
+            </font></ul>
+      
+      <br><font class="clsMethodHeadings">Preconditions </font>
+        <ul>
+          <br><font class="clsDetailItem">
+            User must have proper permissions to get users.
+            </font></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Input Data</font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>AliasName</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>The alias name given in the web services config file
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LoginID</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>CORRIDOR user name 
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LoginPassword</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Encrypted Corridor password
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>SessionToken</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>33 character length string
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Auth0Token</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>33 character length string
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Username</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br>
+      <br>
+        <ul></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Returned Data/Return Type </font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>Type</th>
+              <th>Value</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StatusMessage</td>
+              <td>
+				&nbsp;
+			</td>
+              <td>Success/Failed
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Username</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UserKey</td>
+              <td>Long
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PurchaseLimit</td>
+              <td>Double
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>RegularCost</td>
+              <td>Double
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OvertimeCost</td>
+              <td>Double
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>DoubleTimeCost</td>
+              <td>Double
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>RegularBurdenCost</td>
+              <td>Double
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OvertimeBurdenCost</td>
+              <td>Double
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>DoubleTimeBurdenCost</td>
+              <td>Double
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Fullname</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Description</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Department</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UserBadgeID</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Email</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CorridorIDEmail</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CorridorIDRequired</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ActiveDirectoryName</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UserPermissionsProfile</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UserDefinedFields</td>
+              <td><a href="#GetUserUserDefinedField">Array of UserDefinedField</a></td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>RegularLaborAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OvertimeLaborAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>DoubleTimeLaborAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LaborBurdenAccountNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>DefaultScreen</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>MustChangePassword</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CannotChangePassword</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>AccountDisabled</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Locator</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>SuspendLocator</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CanSelectLocator</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CanSelectToVendorLot</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ReceivingInspector</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>TipOfDay</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LargeButtons</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>DisablePersistence</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>DefaultIncludeFuelActivity</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OnlyIncludeFuelActivity</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>DefaultIncludeServiceActivity</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OnlyIncludeServiceActivity</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>DefaultIncludePartSaleActivity</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OnlyIncludePartSaleActivity</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>DefaultIncludeCateringActivity</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OnlyIncludeCateringActivity</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>DefaultIncludeHotelActivity</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OnlyIncludeHotelActivity</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>DefaultIncludeTransportationActivity</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OnlyIncludeTransportationActivity</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LaunchLogbookResearch</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CanEnterCompliance</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>IncludeAllDefaultLogbookSearchCriteria</td>
+              <td>Boolean
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br><a name="GetUserUserDefinedField"></a><font class="clsDetailSubHeadings">UserDefinedField<br>  <br><br></font>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>Type</th>
+              <th>Value</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Label</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Data</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>Options determine required state and validation.
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br><font class="clsMethodHeadings">Possible Error Codes </font>
+        <br>
+        <br>
+        <ul><font class="clsDetailItem"><a href="../ErrorCodes/UserManagementErrors.htm">User Management Error codes</a></font></ul>
+      
+    </ul>
+    <br>
+    <br><font class="clsDetailItem">Back to <a href="UserManagement.htm">User Management</a></font></BODY>
+</HTML>
