@@ -1,0 +1,1462 @@
+<HTML>
+  <HEAD>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+    <LINK href="../Cws.css" type="text/css" rel="stylesheet">
+    <TITLE></TITLE>
+  </HEAD>
+  <BODY><font class="clsMethodName">AddWorkOrderSquawkRequest</font>
+    <ul>
+      <br><font class="clsMethodHeadings">Description </font>
+        <ul>
+          <br><font class="clsDetailItem"> 
+            This request adds a work order squawk.
+            </font></ul>
+      
+      <br><font class="clsMethodHeadings">Preconditions </font>
+        <ul>
+          <br><font class="clsDetailItem">
+            User must have permissions to add work order squawk and work order / work order item must be in an editable state.
+            </font></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Input Data</font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Path</td>
+              <td><a href="#AddWorkOrderSquawkPath">Path</a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Discrepancy</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>CLOB (4GB)
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Department</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OpenedBy</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OpenedOn</td>
+              <td>DateTime
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Format = MM/DD/YYYY HH:MM:SS
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Resolution</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>CLOB (4GB)
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>AssociatedSquawkPath</td>
+              <td>Path
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>AssociationReason</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>SquawkBillingMethod</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LaborBillingMethod</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartsBillngMethod</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServicesBillingMethod</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FlatRateTaxClass</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FreightTaxClass</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LaborTaxClass</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartsTaxClass</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServicesTaxClass</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>MiscChargesTaxClass</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>RevenueCustomerCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CostCustomerCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartSerialNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartLotNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Deprecated
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartDescription</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Deprecated
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Quantity</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Deprecated
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>TSN_TSO</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Deprecated
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CSN_CSO</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Deprecated
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>TagPrinted</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Deprecated
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Appendix</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Logbook</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WorkOrderSquawkATACode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>SquawkBillingPrice</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LaborPrice</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LaborHours</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UserDefinedFields</td>
+              <td><a href="#AddWorkOrderSquawkUserDefinedField">Array of UserDefinedField</a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOSquawkMalfunctionCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOSquawkResultCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOSquawkComplianceMethod</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WorkOrderSquawkZoneName</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WorkOrderSquawkZoneDescription</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOSquawkTaskFindings</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CannedSquawkName</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CustomerInitiated</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>SuppressFromWOInvoice</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LaborIsPerHour</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = True
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>AssignToSpecificCustomer</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UsePercentagePartsCost</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UserPercentageServicesCost</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UsePercentageMiscChargesCost</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UsePercentagePartsRevenue</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UserPercentageServicesRevenue</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UsePercentageMiscChargesRevenue</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>SquawkIsTaxable</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartsAreTaxable</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServicesAreTaxable</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>IsAirworthy</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OriginatingSquawk</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OverrideDepartment</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>OverrideApplicability</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>AddAssociatedPartsandServices</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>AddWorkPak</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>AddPrerequisteSquawks</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ChangePostingDefinition</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br>
+      <br>
+        <ul><a name="AddWorkOrderSquawkPath"></a>Path
+          <br>
+          <br>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WONumber</td>
+              <td>Long
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Either/or relationship with FormattedWorkOrderNumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOItemNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOSquawkNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+          </table>
+          <br><a name="AddWorkOrderSquawkUserDefinedField"></a><font class="clsDetailSubHeadings">UserDefinedField<br><br><br></font>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Label</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Data</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Options determine required state and validation.
+                <br>
+              </td>
+            </tr>
+          </table>
+          <br><font class="clsDetailSubHeadings"><a href="../Sample_Code/Nested_Structures.htm">Working with data structures and arrays</a></font></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Returned Data/Return Type </font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>Type</th>
+              <th>Value</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StatusMessage</td>
+              <td>
+				&nbsp;
+			</td>
+              <td>Success/Failed
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOFormattedNumber</td>
+              <td>
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br><font class="clsMethodHeadings">Possible Error Codes </font>
+        <br>
+        <br>
+        <ul><font class="clsDetailItem"><a href="../ErrorCodes/WorkOrderErrors.htm">Work Order Error codes</a></font></ul>
+      
+    </ul>
+    <br>
+    <br><font class="clsDetailItem">Back to <a href="WorkOrder.htm">Work Order</a></font></BODY>
+</HTML>

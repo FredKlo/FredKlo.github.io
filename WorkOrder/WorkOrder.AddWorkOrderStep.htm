@@ -1,0 +1,740 @@
+<HTML>
+  <HEAD>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+    <LINK href="../Cws.css" type="text/css" rel="stylesheet">
+    <TITLE></TITLE>
+  </HEAD>
+  <BODY><font class="clsMethodName">AddWorkOrderStepRequest</font>
+    <ul>
+      <br><font class="clsMethodHeadings">Description </font>
+        <ul>
+          <br><font class="clsDetailItem"> 
+            This request adds a work order step.
+            </font></ul>
+      
+      <br><font class="clsMethodHeadings">Preconditions </font>
+        <ul>
+          <br><font class="clsDetailItem">
+            User must have permissions to add work order step. Step / work order branch must be in an editable state.
+            </font></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Input Data</font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Path</td>
+              <td><a href="#AddWorkOrderStepPath">Path</a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOStepNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StepDescription</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>CLOB (4GB)
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Department</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StepATACode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StepBillingMethod</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LaborBillingMethod</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartsBillngMethod</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServicesBillingMethod</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>RevenueCustomerCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CostCustomerCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UserDefinedFields</td>
+              <td><a href="#AddWorkOrderStepUserDefinedField">Array of UserDefinedField</a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FlatRateTaxClass</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FreightTaxClass</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LaborTaxClass</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartsTaxClass</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServicesTaxClass</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>MiscChargesTaxClass</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LaborPrice</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>LaborHours</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOStepPrice</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UsePercentagePartsCost</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UserPercentageServicesCost</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UsePercentageMiscChargesCost</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UsePercentagePartsRevenue</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>AssignToSpecificCustomer</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br>
+      <br>
+        <ul><a name="AddWorkOrderStepPath"></a>Path
+          <br>
+          <br>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WONumber</td>
+              <td>Long
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Either/or relationship with FormattedWorkOrderNumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOItemNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Must be used with WONumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOSquawkNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Must be used with WOItemNumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOSteps</td>
+              <td><a href="#WOSteps">Array of </a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Collection of step numbers for path.
+                <br>
+              </td>
+            </tr>
+          </table>
+          <br><a name="AddWorkOrderStepUserDefinedField"></a><font class="clsDetailSubHeadings">UserDefinedField<br><br><br></font>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Label</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Data</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Options determine required state and validation.
+                <br>
+              </td>
+            </tr>
+          </table>
+          <br><font class="clsDetailSubHeadings"><a href="../Sample_Code/Nested_Structures.htm">Working with data structures and arrays</a></font></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Returned Data/Return Type </font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>Type</th>
+              <th>Value</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StatusMessage</td>
+              <td>
+				&nbsp;
+			</td>
+              <td>Success/Failed
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOFormattedNumber</td>
+              <td>
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br><font class="clsMethodHeadings">Possible Error Codes </font>
+        <br>
+        <br>
+        <ul><font class="clsDetailItem"><a href="../ErrorCodes/WorkOrderErrors.htm">Work Order Error codes</a></font></ul>
+      
+    </ul>
+    <br>
+    <br><font class="clsDetailItem">Back to <a href="WorkOrder.htm">Work Order</a></font></BODY>
+</HTML>

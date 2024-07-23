@@ -1,0 +1,932 @@
+<HTML>
+  <HEAD>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+    <LINK href="../Cws.css" type="text/css" rel="stylesheet">
+    <TITLE></TITLE>
+  </HEAD>
+  <BODY><font class="clsMethodName">AddWOSquawkPartAssemblyRequest</font>
+    <ul>
+      <br><font class="clsMethodHeadings">Description </font>
+        <ul>
+          <br><font class="clsDetailItem"> 
+            This requests adds WO Squawk Part/Assembly data
+            </font></ul>
+      
+      <br><font class="clsMethodHeadings">Preconditions </font>
+        <ul>
+          <br><font class="clsDetailItem">
+            </font></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Input Data</font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyActivity</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>CLOB (4GB)
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnPartNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnPartDescription</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnPartManufacturer</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnSerialNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnQuantity</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnPartCondition</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnFuselageStation</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnWeight</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnFixedWingCGArm</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnLongitudeCGArm</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnLatitudeCGArm</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyOKToInstall</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffPartNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffPartDescription</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffPartManufacturer</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffSerialNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffQuantity</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffFuselageStation</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffWeight</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffFixedWingCGArm</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffLongitudeCGArm</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffLatitudeCGArm</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffStorage</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyMalfuntionCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyResultCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffTSN</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffCSN</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffDSN</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffCSR</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffDSR</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffCSO</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffDSO</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnCSN</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnDSN</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnCSR</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnDSR</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnCSO</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnDSO</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffHardwareVersion</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOffSoftwareVersion</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnHardwareVersion</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartAssemblyPartOnSoftwareVersion</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br>
+      <br>
+        <ul></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Returned Data/Return Type </font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>Type</th>
+              <th>Value</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StatusMessage</td>
+              <td>
+				&nbsp;
+			</td>
+              <td>Success/Failed
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br><font class="clsMethodHeadings">Possible Error Codes </font>
+        <br>
+        <br>
+        <ul><font class="clsDetailItem"><a href="../ErrorCodes/WorkOrderErrors.htm">Work Order Error codes</a></font></ul>
+      
+    </ul>
+    <br>
+    <br><font class="clsDetailItem">Back to <a href="WorkOrder.htm">Work Order</a></font></BODY>
+</HTML>

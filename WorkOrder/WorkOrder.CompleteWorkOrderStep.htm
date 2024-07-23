@@ -1,0 +1,244 @@
+<HTML>
+  <HEAD>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+    <LINK href="../Cws.css" type="text/css" rel="stylesheet">
+    <TITLE></TITLE>
+  </HEAD>
+  <BODY><font class="clsMethodName">CompleteWorkOrderStepRequest</font>
+    <ul>
+      <br><font class="clsMethodHeadings">Description </font>
+        <ul>
+          <br><font class="clsDetailItem"> 
+            This request completes a work order step in the Work Order module.
+            </font></ul>
+      
+      <br><font class="clsMethodHeadings">Preconditions </font>
+        <ul>
+          <br><font class="clsDetailItem">
+            All sub-steps of the step must be completed, and the step must be signed off and inspected. 
+            User must have proper permissions to complete work order steps.
+            </font></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Input Data</font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Path</td>
+              <td><a href="#CompleteWorkOrderStepPath">Path</a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOStepNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOStepCompletedBy</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>True
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOStepCompletedDateTime</td>
+              <td>DateTime
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Format = MM/DD/YYYY HH:MM:SS
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br>
+      <br>
+        <ul><a name="CompleteWorkOrderStepPath"></a>Path
+          <br>
+          <br>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WONumber</td>
+              <td>Long
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Either/or relationship with FormattedWorkOrderNumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOItemNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Must be used with WONumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOSquawkNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Must be used with WOItemNumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOSteps</td>
+              <td><a href="#WOSteps">Array of </a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Collection of step numbers for path.
+                <br>
+              </td>
+            </tr>
+          </table>
+          <br>
+        </ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Returned Data/Return Type </font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>Type</th>
+              <th>Value</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StatusMessage</td>
+              <td>
+				&nbsp;
+			</td>
+              <td>Success/Failed
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br><font class="clsMethodHeadings">Possible Error Codes </font>
+        <br>
+        <br>
+        <ul><font class="clsDetailItem"><a href="../ErrorCodes/WorkOrderErrors.htm">Work Order Error codes</a></font></ul>
+      
+    </ul>
+    <br>
+    <br><font class="clsDetailItem">Back to <a href="WorkOrder.htm">Work Order</a></font></BODY>
+</HTML>

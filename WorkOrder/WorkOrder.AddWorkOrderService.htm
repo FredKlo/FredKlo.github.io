@@ -1,0 +1,952 @@
+<HTML>
+  <HEAD>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+    <LINK href="../Cws.css" type="text/css" rel="stylesheet">
+    <TITLE></TITLE>
+  </HEAD>
+  <BODY><font class="clsMethodName">AddWorkOrderServiceRequest</font>
+    <ul>
+      <br><font class="clsMethodHeadings">Description </font>
+        <ul>
+          <br><font class="clsDetailItem"> 
+            This request adds a work order service.
+            </font></ul>
+      
+      <br><font class="clsMethodHeadings">Preconditions </font>
+        <ul>
+          <br><font class="clsDetailItem">
+            User must have permissions to add work order service. Service / work order branch must be in an editable state.
+            </font></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Input Data</font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Path</td>
+              <td><a href="#AddWorkOrderServicePath">Path</a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServiceDescription</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Cannot be empty. Can be free-form text
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServiceDemandQuantity</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Cannot be empty.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>RevenueCustomerCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CostCustomerCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>RequestedCondition</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>SuggestedVendorCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServiceCosAccountNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Only modifiable if CustomizePostingDefinition is true.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServiceCosVarianceAccountNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Only modifiable if CustomizePostingDefinition is true.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServiceSalesAccountNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Only modifiable if CustomizePostingDefinition is true.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServiceWipCosAccountNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Only modifiable if CustomizePostingDefinition is true.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServiceWipReceivableAccountNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Only modifiable if CustomizePostingDefinition is true.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServiceWipRevenueAccountNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Only modifiable if CustomizePostingDefinition is true.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FreightCosAccountNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Only modifiable if CustomizePostingDefinition is true.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FreightCosVarianceAccountNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Only modifiable if CustomizePostingDefinition is true.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FreightWipCosAccountNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Only modifiable if CustomizePostingDefinition is true.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartDescription</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartManufacturer</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>IsNonMasteredPart</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PostingDepartment</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Not modifiable if CustomizePostingDefinition is true. Work order branch must have cost/revenue distributed to modify.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PostingProfileCode</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Not modifiable if CustomizePostingDefinition is true. Work order branch must have cost/revenue distributed to modify.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>TaxClass</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ListPrice</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>UnitPrice</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Cannot be modified unless ServiceCalculatedByCorridor is true.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>PartSerialNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FreightCharge</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FreightCost</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WorkInstructions</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>QualityRequirements</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>EstimatedPrice</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>EstimatedCost</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>EstimatedQuantity</td>
+              <td>Double
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServiceCalculatedByCorridor</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ServiceIsTaxable</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CustomizePostingDefinition</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Cannot be modified unless distribute revenue / cost is set for the work order branch.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>FreightIsTaxable</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Default value = False
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>CalculateFrieghtCharge</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>ForceServiceApplicability</td>
+              <td>Boolean
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Allows services to be applicable to any part.
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br>
+      <br>
+        <ul><a name="AddWorkOrderServicePath"></a>Path
+          <br>
+          <br>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WONumber</td>
+              <td>Long
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Either/or relationship with FormattedWorkOrderNumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOItemNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Must be used with WONumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOSquawkNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Must be used with WOItemNumber.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOSteps</td>
+              <td><a href="#WOSteps">Array of </a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Collection of step numbers for path.
+                <br>
+              </td>
+            </tr>
+          </table>
+          <br>
+        </ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Returned Data/Return Type </font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>Type</th>
+              <th>Value</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StatusMessage</td>
+              <td>
+				&nbsp;
+			</td>
+              <td>Success/Failed
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOFormattedNumber</td>
+              <td>
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br><font class="clsMethodHeadings">Possible Error Codes </font>
+        <br>
+        <br>
+        <ul><font class="clsDetailItem"><a href="../ErrorCodes/WorkOrderErrors.htm">Work Order Error codes</a></font></ul>
+      
+    </ul>
+    <br>
+    <br><font class="clsDetailItem">Back to <a href="WorkOrder.htm">Work Order</a></font></BODY>
+</HTML>
