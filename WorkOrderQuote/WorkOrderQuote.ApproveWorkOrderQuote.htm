@@ -1,0 +1,340 @@
+<HTML>
+  <HEAD>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+    <LINK href="../Cws.css" type="text/css" rel="stylesheet">
+    <TITLE></TITLE>
+  </HEAD>
+  <BODY><font class="clsMethodName">ApproveWorkOrderQuoteRequest</font>
+    <ul>
+      <br><font class="clsMethodHeadings">Description </font>
+        <ul>
+          <br><font class="clsDetailItem"> 
+            The request supports approving of Work Order Quote Items, Squawks, Steps, Parts, Services and Misc Charges.
+            </font></ul>
+      
+      <br><font class="clsMethodHeadings">Preconditions </font>
+        <ul>
+          <br><font class="clsDetailItem">
+            Work order quote entity must be in a valid state to be approved.
+            The "Approved by" user must have proper permissions.
+            </font></ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Input Data</font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>Path</td>
+              <td><a href="#ApproveWorkOrderQuotePath">Path</a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>This is the Work Order Quote path
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOQApprovedBy</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Corridor User (user name) that is approving the quote
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOQContactName</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>This is the company contact that gives permission to sign approve this. 
+            This contact must be a contact set up in Contact Profile.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOQApprovedOnDate</td>
+              <td>DateTime
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>If not entered the date/time that request is sent will be recorded as 
+            the approved time. The date format follows the ISO 8601 standard xs:dateTime 
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br>
+      <br>
+        <ul><a name="ApproveWorkOrderQuotePath"></a>Path
+          <br>
+          <br>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>DataType</th>
+              <th>Precision</th>
+              <th>Required</th>
+              <th>Validated</th>
+              <th>Notes/Description</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOQNumber</td>
+              <td>Long
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Either/or relationship with WOQFormattedNumber.  This is a six to
+            digit 10 digit number with the format YYYYDDDDDD.  Where D represents 
+            the WOQ number. If the number is less than 6 digits long it is prepended by 0s.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOQFormattedNumber</td>
+              <td>String
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>255
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>This formatted WOQ number is determined by what is set in 
+            Corridor as the Work order Quote format.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOQItemNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>This is always required. This is the item number that is being 
+            approved or the item of the squawk or step or sub-step or part or labor 
+            or service miscellaneous charge.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOQSquawkNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>WOQ squawk number
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOQSteps</td>
+              <td><a href="#WOQSteps">Array of </a>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>Must be used with a squawk Collection of step numbers for path.
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOQPartPathNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Must be used with a squawk and cannot be used with the WOQServicePathNumber or WOQMiscChargePathNumber
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOQServicePathNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Must be used with a squawk and cannot be used with the WOQPartPathNumber or WOQMiscChargePathNumber
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOQMiscChargePathNumber</td>
+              <td>Integer
+				&nbsp;
+			
+                <br>
+              </td>
+              <td>
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>X
+                <br>
+              </td>
+              <td>Must be used with a squawk and cannot be used with the WOQPartPathNumber or WOQServicePathNumber
+                <br>
+              </td>
+            </tr>
+          </table>
+          <br>
+        </ul>
+      
+      <br>
+      <br><font class="clsMethodHeadings">Returned Data/Return Type </font>
+        <br>
+        <br>
+        <ul>
+          <table cellpadding="3" width="700" border="1" cellspacing="0">
+            <tr class="clsDetailHeadings">
+              <th>Name</th>
+              <th>Type</th>
+              <th>Value</th>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>StatusMessage</td>
+              <td>
+				&nbsp;
+			</td>
+              <td>Success/Failed
+                <br>
+              </td>
+            </tr>
+            <tr class="clsDetailItem">
+              <td>WOFormattedNumber</td>
+              <td>String
+				&nbsp;
+			</td>
+              <td>
+                <br>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      
+      <br><font class="clsMethodHeadings">Possible Error Codes </font>
+        <br>
+        <br>
+        <ul><font class="clsDetailItem"><a href="../ErrorCodes/WorkOrderQuoteErrors.htm">Work Order Quote Error codes</a></font></ul>
+      
+    </ul>
+    <br>
+    <br><font class="clsDetailItem">Back to <a href="WorkOrderQuote.htm">Work Order Quote</a></font></BODY>
+</HTML>
