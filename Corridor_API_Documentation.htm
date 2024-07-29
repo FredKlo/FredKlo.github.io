@@ -231,30 +231,30 @@ body {
 
 <p>&nbsp;</p>
 
-<p style="margin-left: 40px;">The Corridor API can be used with Java applications
+<p style="margin-left: 20px;">The Corridor API can be used with Java applications
  as well. A Java wrapper through the Java Native Interface is also provided
  for the APIs. The process of using the APIs with the Java applications
  is well described through the example code and in further paragraphs.</p>
 
-<p style="margin-left: 40px;">&nbsp;</p>
+<p style="margin-left: 20px;">&nbsp;</p>
 
 <p style="margin-left: 0px;"><span style="font-weight: bold;">Conventions</span></p>
 
-<p style="margin-left: 40px;">&nbsp;</p>
+<p style="margin-left: 20px;">&nbsp;</p>
 
-<p style="margin-left: 40px;">Unless otherwise stated, all String type
+<p style="margin-left: 20px;">Unless otherwise stated, all String type
  data is 255 characters in length. When a data object is described as &quot;Must
  be valid&quot; this means that the value you are entering must exist in
  the database in the proper tables that hold objects of the type you are
  attempting to pass.</p>
 
-<p style="margin-left: 40px;">&nbsp;</p>
+<p style="margin-left: 20px;">&nbsp;</p>
 
 <p style="font-weight: bold;">High-level Design</p>
 
 <p style="font-weight: bold;">&nbsp;</p>
 
-<p style="margin-left: 40px;">The APIs are designed to be generic and process
+<p style="margin-left: 20px;">The APIs are designed to be generic and process
  oriented. They work with request and response objects. A request object
  contains a request type and a request data payload. The request type is
  string data and the request payload is a group of primitive data types
@@ -267,13 +267,13 @@ body {
  error text. The request and response object format can be a Map (i.e.
  collection of name-value pairs), XML, etc…</p>
 
-<p style="margin-left: 40px;">&nbsp;</p>
+<p style="margin-left: 20px;">&nbsp;</p>
 
 <p style="font-weight: bold;">Session Oriented</p>
 
 <p style="font-weight: bold;">&nbsp;</p>
 
-<p style="margin-left: 40px;">Interacting with APIs is session oriented.
+<p style="margin-left: 20px;">Interacting with APIs is session oriented.
  A session is initiated via a login process. The database schema name,
  user name and user password is required for the login, which authenticates
  the user and establishes the user authorizations based on the permissions
@@ -291,21 +291,21 @@ body {
 
 <p style="font-weight: bold;">&nbsp;</p>
 
-<p style="margin-left: 40px;">Within a session one or more requests can
+<p style="margin-left: 20px;">Within a session one or more requests can
  be processed. Each request processing verifies the user privileges established
  during the login. Each request process corresponds to a transaction. On
  the successful processing of an add/update request, the data is committed.
  If the request throws an error the data is rolled back. This makes the
  sessions stateless.</p>
 
-<p style="margin-left: 40px;">&nbsp;</p>
+<p style="margin-left: 20px;">&nbsp;</p>
 
 <p style="margin-left: 0px; font-weight: bold;"><a HREF="Sample_Code/Using_APIs_With_Java_Wrapper.htm">Using
  APIs Through Java</a></p>
 
 <p style="margin-left: 0px;">&nbsp;</p>
 
-<p style="margin-left: 40px;">The process for using the APIs through a
+<p style="margin-left: 20px;">The process for using the APIs through a
  Java Application is via Java wrapper classes that invoke the C and C++
  methods of the APIs. The <a href="Sample_Code/Request_and_Response_Maps.htm">request
  and response data</a> from the Java objects are translated to the C++
@@ -315,9 +315,9 @@ body {
  update the PATH environment variable on your system to include the path
  to the DLL file.</p>
 
-<p style="margin-left: 40px;">&nbsp;</p>
+<p style="margin-left: 20px;">&nbsp;</p>
 
-<p style="margin-left: 40px;">The Java wrapper constitutes of a primary
+<p style="margin-left: 20px;">The Java wrapper constitutes of a primary
  class, com.continuum.api.RitaSession, which encapsulates the StartNewSession
  (), EndSession () and ProcessRequest () methods of the C++ APIs described
  earlier. Also the Java java.util.Map and java.util.List are used in place
@@ -328,13 +328,13 @@ body {
  sending the request using the session object and processing the reprocessing
  of the response data may be in a different class or classes.</p>
 
-<p style="margin-left: 40px;">&nbsp;</p>
+<p style="margin-left: 20px;">&nbsp;</p>
 
 <p style="font-weight: bold;">API Organization By Module</p>
 
 <p>&nbsp;</p>
 
-<p style="font-weight: bold; margin-left: 40px;"><span style="font-weight: normal;">APIs
+<p style="font-weight: bold; margin-left: 20px;"><span style="font-weight: normal;">APIs
  are organized by Corridor module. Each API is used to manipulate, add, and
  get data that is pertinent to each module inside of Corridor. Use the Contents
  tab on the left to view all API requests for each listed module.</span></p>
