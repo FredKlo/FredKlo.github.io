@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  
 body {
   font-family: "Lato", sans-serif;
 }
@@ -38,7 +39,6 @@ body {
 
 .main {
   margin-left: 225px; /* Same as the width of the sidenav */
-  /*font-size: 28px;  Increased text to enable scrolling */
   padding: 0px 20px;
 }
 
@@ -58,17 +58,430 @@ body {
   /*padding-left: 8px;*/
 }
 
-
-
-
-
-  
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 25px;}
   .sidenav a {font-size: 18px;}
 }
 </style>
 </head>
+  
+<body>
+
+<div class="sidenav">
+  <a href="index.html">Home</a>
+  <a href="Corridor_API_Documentation.htm">API Introduction</a>
+  <a href="WebServicesList.htm">Web Services</a>
+  
+  <button class="dropdown-btn">Sample Code 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="Sample_Code/Sample_Code.htm">Sample Code Home</a>
+    <a href="Sample_Code/Core_Methods.htm">Core Methods</a>
+    <a href="Sample_Code/Java_Define_File_Format.htm">Java Format</a>
+    <a href="Sample_Code/Nested_Structures.htm">Nested Structures</a>
+    <a href="Sample_Code/Request_and_Response_Maps.htm">Maps</a>
+    <a href="Sample_Code/Using_APIs_With_Java_Wrapper.htm">Java Wrapper With APIs</a>
+  </div>
+  
+  <button class="dropdown-btn">Error Codes 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="ErrorCodes/Errors.htm">Error Code Home</a>
+    <a href="ErrorCodes/AccountingErrors.htm">Accounting</a>
+    <a href="ErrorCodes/AircraftOwnershipErrors.htm">Aircraft Ownership</a>
+    <a href="ErrorCodes/CannedSquawkErrors.htm">Canned Squawk</a>
+    <a href="ErrorCodes/CompanyDatabaseErrors.htm">Company Database</a>
+    <a href="ErrorCodes/ContactManagementErrors.htm">Contact Management</a>
+    <a href="ErrorCodes/LineSalesErrors.htm">Line Sales</a>
+    <a href="ErrorCodes/PartMasterErrors.htm">Part Master</a>
+    <a href="ErrorCodes/PartServiceErrors.htm">Part Service</a>
+    <a href="ErrorCodes/ReceivingErrors.htm">Receiving</a>
+    <a href="ErrorCodes/SalesInvoiceErrors.htm">Sales Invoice</a>
+    <a href="ErrorCodes/SalesOrderErrors.htm">Sales Order</a>
+    <a href="ErrorCodes/ShipingErrors.htm">Shipping</a>
+    <a href="ErrorCodes/SystemServiceErrors.htm">System Service</a>
+    <a href="ErrorCodes/UserManagementErrors.htm">User Management</a>
+    <a href="ErrorCodes/WorkOrderErrors.htm">Work Order</a>
+    <a href="ErrorCodes/WorkPakErrors.htm">Work Pak</a>
+  </div>
+  
+  <button class="dropdown-btn">Accounting 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="Accounting/Accounting.htm">Accounting Home</a>
+    <a href="Accounting/Accounting.ClearWipRequest.htm">Clear Wip</a>
+    <a href="Accounting/Accounting.DisableAllAutopostFacilitiesRequest.htm">Disable All Autopost</a>
+    <a href="Accounting/Accounting.DisableAutopostFacilityRequest.htm">Disable Autopost</a>
+    <a href="Accounting/Accounting.EnableAllAutopostFacilitiesRequest.htm">Enable All Autopost</a>
+    <a href="Accounting/Accounting.EnableAutopostFacilityRequest.htm">Enable Autopost</a>
+    <a href="Accounting/Accounting.ProcessAutopostFacilityRequest.htm">Process Autopost Request</a>
+  </div>
+
+  <button class="dropdown-btn">Aircraft Ownership
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="AircraftOwnership/AircraftOwnership.htm">Aircraft Ownership Home</a>
+    <a href="AircraftOwnership/AddOrUpdateAircraft.htm">Add or Update</a>
+    <a href="AircraftOwnership/AddOrUpdateAircraftDiscrepancy.htm">Add or Update Discrepancy</a>
+    <a href="AircraftOwnership/AddTransaction.htm">Add Transaction</a>
+    <a href="AircraftOwnership/ChangeHourMeter.htm">Change Hour Meter</a>
+    <a href="AircraftOwnership/CreateAircraft.htm">Create Aircraft</a>
+    <a href="AircraftOwnership/CreateAircraftDiscrepancy.htm">Create Aircraft Discrepancy</a>
+    <a href="AircraftOwnership/DeleteTransaction.htm">Delete Transaction</a>
+    <a href="AircraftOwnership/FlightOpsUpdate.htm">Flight Ops Update</a>
+    <a href="AircraftOwnership/GetAircraftData.htm">Get Aircraft Data</a>
+    <a href="AircraftOwnership/SelectHourMeter.htm">Select Hour Meter</a>
+    <a href="AircraftOwnership/SelectTransaction.htm">Select Transaction</a>
+    <a href="AircraftOwnership/UpdateAircraft.htm">Update Aircraft</a>
+    <a href="AircraftOwnership/UpdateAircraftDiscrepancy.htm">Update Aircraft Discrepancy</a>
+    <a href="AircraftOwnership/UpdateTransaction.htm">Update Transaction</a>
+  </div>
+
+  <button class="dropdown-btn">Canned Squawk
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="CannedSquawk/CannedSquawk.htm">Canned Squawk Home</a>
+    <a href="CannedSquawk/CannedSquawk.AddCannedSquawkCompliance.htm">Add Compliance</a>
+    <a href="CannedSquawk/CannedSquawk.UpdateCannedSquawkCompliance.htm">Update Compliance</a>
+    <a href="CannedSquawk/CannedSquawk.AddOrUpdateCannedSquawkCompliance.htm">Add or Update Compliance</a>
+  </div>
+
+  <button class="dropdown-btn">Company Database
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="CompanyDatabase/CompanyDatabase.AddAddress.htm">Company Database Home</a>
+    <a href="CompanyDatabase/CompanyDatabase.AddCompanyData.htm">Add Company Data</a>
+    <a href="CompanyDatabase/CompanyDatabase.AddOrUpdateAddress.htm">Update Address</a>
+    <a href="CompanyDatabase/CompanyDatabase.AddOrUpdateCompanyData.htm">Update Data</a>
+    <a href="CompanyDatabase/CompanyDatabase.AddOrUpdatePhone.htm">Update Phone</a>
+    <a href="CompanyDatabase/CompanyDatabase.AddPhone.htm">Add Phone</a>
+    <a href="CompanyDatabase/CompanyDatabase.DeleteAddress.htm">Delete Address</a>
+    <a href="CompanyDatabase/CompanyDatabase.DeletePhone.htm">Delete Phone</a>
+    <a href="CompanyDatabase/CompanyDatabase.GetAddress.htm">Get Address</a>
+    <a href="CompanyDatabase/CompanyDatabase.GetAirports.htm">Get Airports</a>
+    <a href="CompanyDatabase/CompanyDatabase.GetCompanyData.htm">Get Company Data</a>
+    <a href="CompanyDatabase/CompanyDatabase.GetCountries.htm">Get Countries</a>
+    <a href="CompanyDatabase/CompanyDatabase.GetCreditRatings.htm">Get Credit Ratings</a>
+    <a href="CompanyDatabase/CompanyDatabase.GetCreditRestrictions.htm">Get Credit Restrictions</a>
+    <a href="CompanyDatabase/CompanyDatabase.GetCustomerClasses.htm">Get Customer Class</a>
+    <a href="CompanyDatabase/CompanyDatabase.GetPhone.htm">Get Phone</a>
+    <a href="CompanyDatabase/CompanyDatabase.GetRegions.htm">Get Regions</a>
+    <a href="CompanyDatabase/CompanyDatabase.GetStates.htm">Get States</a>
+    <a href="CompanyDatabase/CompanyDatabase.GetTimeZones.htm">Get Time Zones</a>
+    <a href="CompanyDatabase/CompanyDatabase.InactivateCompany.htm">Deactivate Company</a>
+    <a href="CompanyDatabase/CompanyDatabase.ReactivateCompany.htm">Reactivate Company</a>
+    <a href="CompanyDatabase/CompanyDatabase.UpdateAddress.htm">Update Address</a>
+    <a href="CompanyDatabase/CompanyDatabase.UpdateCompanyData.htm">Update Data</a>
+    <a href="CompanyDatabase/CompanyDatabase.UpdatePhone.htm">Update Phone</a>
+  </div>
+  
+  <button class="dropdown-btn">Contact Profile
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="ContactProfile/ContactProfile.htm">Contact Profile Home</a>
+    <a href="ContactProfile/ContactProfile.AddContact.htm">Add Contact</a>
+    <a href="ContactProfile/ContactProfile.AddOrUpdateContact.htm">Add or Update Contact</a>
+    <a href="ContactProfile/ContactProfile.AddOrUpdateContactAsCrew.htm">Add or Update Contact Crew</a>
+    <a href="ContactProfile/ContactProfile.AddOrUpdateContactAsPassenger.htm">Add or Update Contact Passenger</a>
+    <a href="ContactProfile/ContactProfile.DeleteContactAsCrew.htm">Delete Contact Crew</a>
+    <a href="ContactProfile/ContactProfile.DeleteContactAsPassenger.htm">Delete Contact Passenger</a>
+    <a href="ContactProfile/ContactProfile.GetContactData.htm">Get Contact Data</a>
+    <a href="ContactProfile/ContactProfile.SelectContactAsCrew.htm">Select Contact Crew</a>
+    <a href="ContactProfile/ContactProfile.SelectContactAsPassenger.htm">Select Contact Passenger</a>
+    <a href="ContactProfile/ContactProfile.UpdateContact.htm">Update Contact</a>
+  </div>
+
+  <button class="dropdown-btn"> Inventory
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="Inventory/PartMaster.htm">Inventory Home</a>
+    <a href="Inventory/PartMaster.AddAlternatePartRequest.htm">Alternate Partt</a>
+    <a href="Inventory/PartMaster.AddLotRequest.htm">Add Lot Request</a>
+    <a href="Inventory/PartMaster.AddOrUpdateAlternatePartRequest.htm">Update Alternate Part</a>
+    <a href="Inventory/PartMaster.AddOrUpdatePartMaster.htm">Update Part Master</a>
+    <a href="Inventory/PartMaster.AddOrUpdatePartMasterHoldCode.htm">ADd Hold Code</a>
+    <a href="Inventory/PartMaster.AddOrUpdatePartMasterWarehouseBinRequest.htm">Update Bin</a>
+    <a href="Inventory/PartMaster.AddOrUpdatePartMasterWarehouseLevels.htm">Update Warehouse Levels</a>
+    <a href="Inventory/PartMaster.AddOrUpdatePartPrice.htm">Update Price</a>
+    <a href="Inventory/PartMaster.AddOrUpdateSupersededPartRequest.htm">Update Superseded Part</a>
+    <a href="Inventory/PartMaster.AddPartMaster.htm">Add Part Master</a>
+    <a href="Inventory/PartMaster.AddPartMasterHoldCode.htm">Add Hold Code</a>
+    <a href="Inventory/PartMaster.AddPartMasterWarehouseBinRequest.htm">Add Bin</a>
+    <a href="Inventory/PartMaster.AddPartPrice.htm">Add Price</a>
+    <a href="Inventory/PartMaster.AddSupersededPartRequest.htm">Add Superseded Part</a>
+    <a href="Inventory/PartMaster.DeleteAlternatePartRequesthtm">Delete Part</a>
+    <a href="Inventory/PartMaster.DeleteLotRequest.htm">Delete Lot</a>
+    <a href="Inventory/PartMaster.DeletePartMasterHoldCode.htm">Delete Hold Code</a>
+    <a href="Inventory/PartMaster.DeletePartMasterWarehouseBinRequest.htm">Delete Bin</a>
+    <a href="Inventory/PartMaster.DeleteSupersededPartRequest.htm">Delete Superseded Part</a>
+    <a href="Inventory/PartMaster.EnterCycleCountRequest.htm">Enter Cycle Count</a>
+    <a href="Inventory/PartMaster.GetActiveCycleCountsRequest.htm">Get Cycle Count</a>
+    <a href="Inventory/PartMaster.GetCycleCountPartsRequest.htm">Get Cycle Part</a>
+    <a href="Inventory/PartMaster.InactivatePartMaster.htm">Inactivate Part Master</a>
+    <a href="Inventory/PartMaster.PrintPartLabelsRequest.htm">Print Labels</a>
+    <a href="Inventory/PartMaster.ReactivatePartMaster.htm">Reactivate Part Master</a>
+    <a href="Inventory/PartMaster.SearchLotRequest.htm">Search Lot</a>
+    <a href="Inventory/PartMaster.SelectAlternatePartRequest.htm">Select Alternate Part</a>
+    <a href="Inventory/PartMaster.SelectLotRequest.htm">Select Lot</a>
+    <a href="Inventory/PartMaster.SelectPartMaster.htm">Select Part Master</a>
+    <a href="Inventory/PartMaster.SelectPartMasterHoldCode.htm">Select Hold Code</a>
+    <a href="Inventory/PartMaster.SelectPartMasterWarehouseBinRequest.htm">Select Bin</a>
+    <a href="Inventory/PartMaster.SelectPartPrice.htm">Select Price</a>
+    <a href="Inventory/PartMaster.SelectSupersededPartRequest.htm">Select Superseded Part</a>
+    <a href="Inventory/PartMaster.SelectWarehouseMinMaxRequest.htm">Select Min/Max</a>
+    <a href="Inventory/PartMaster.ThirdPartyOwnershipTransferReqeust.htm">Third Party</a>
+    <a href="Inventory/PartMaster.UpdateAlternatePartRequest.htm">Update Alternate Part</a>
+    <a href="Inventory/PartMaster.UpdateLotRequest.htm">Update Lot</a>
+    <a href="Inventory/PartMaster.UpdatePartBinRequest.htm">Update Bin</a>
+    <a href="Inventory/PartMaster.UpdatePartMaster.htm">Update Part Master</a>
+    <a href="Inventory/PartMaster.UpdatePartMasterHoldCode.htm">Update Hold Code</a>
+    <a href="Inventory/PartMaster.UpdatePartPrice.htm">Update Price</a>
+    <a href="Inventory/PartMaster.UpdateSupersededPartRequest.htm">Superseded Part</a>
+  </div>
+
+  <button class="dropdown-btn">Line Sales 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="LineSales/LineSales.htm">Line Sales Home</a>
+    <a href="LineSales/LineSales.AddFolioFuelDetail.htm">Add Fuel Detail</a>
+    <a href="LineSales/LineSales.AddFolioFuelSale.htm">Add Fuel Sale</a>
+    <a href="LineSales/LineSales.AddFolioMaster.htm">Add Master</a>
+    <a href="LineSales/LineSales.AddFolioPartSaleDetail.htm">Add Part Sale</a>
+    <a href="LineSales/LineSales.AddFolioServiceDetail.htm">Add Service</a>
+    <a href="LineSales/LineSales.CancelFolioFuelSale.htm">Cancel Fuel Sale</a>
+    <a href="LineSales/LineSales.CancelFolioMaster.htm">Cancel Master</a>
+    <a href="LineSales/LineSales.MoveFolioFuelDetail.htm">Move Fuel Detail</a>
+    <a href="LineSales/LineSales.MoveFolioPartSaleDetail.htm">Move Part Sale</a>
+    <a href="LineSales/LineSales.MoveFolioServiceDetail.htm">Move Service</a>
+    <a href="LineSales/LineSales.SelectFolioFuelDetail.htm">Select Fuel Detail</a>
+    <a href="LineSales/LineSales.SelectFolioFuelSale.htm">Select Fuel Sale</a>
+    <a href="LineSales/LineSales.SelectFolioMaster.htm">Select Master</a>
+    <a href="LineSales/LineSales.SelectFolioPartSaleDetail.htm">Select Part Sale</a>
+    <a href="LineSales/LineSales.SelectFolioFuelSale.htm">Select Fuel Sale</a>
+    <a href="LineSales/LineSales.SelectFolioServiceDetail.htm">Select Service</a>
+    <a href="LineSales/LineSales.SellFuel.htm">Sell Fuel</a>
+    <a href="LineSales/LineSales.UpdateFolioFuelDetail.htm">Update Fuel Detail</a>
+    <a href="LineSales/LineSales.UpdateFolioFuelSale.htm">Update Fuel Sale</a>
+    <a href="LineSales/LineSales.UpdatFolioMaster.htm">Update Master</a>
+    <a href="LineSales/LineSales.UpdateFolioPartSaleDetail.htm">Update Part Sale</a>
+    <a href="LineSales/LineSales.UpdateFolioServiceDetail.htm">Update Service</a>
+    <a href="LineSales/LineSales.VoidFolioFuelDetail.htm">Void Fuel Detail</a>
+    <a href="LineSales/LineSales.VoidFolioPartSaleDetail.htm">Void Part Sale</a>
+    <a href="LineSales/LineSales.VoidFolioServiceDetail.htm">Void Service</a>
+  </div>
+
+  <button class="dropdown-btn">Part/Service Request
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="PartService/PartService.htm">Part/Service Request Home</a>
+    <a href="PartService/PartService.AddPartServiceRequest.htm">Add Part/Service Request</a>
+    <a href="PartService/PartService.ApprovePartServiceRequest.htm">Approve Part/Service Request</a>
+    <a href="PartService/PartService.DeletePartServiceRequest.htm">Delete Part/Service Request</a>
+    <a href="PartService/PartService.SelectPartServiceRequest.htm">Select Part/Service Request</a>
+    <a href="PartService/PartService.UpdatePartServiceRequest.htm">Update Part/Service Request</a>
+  </div>
+
+  <button class="dropdown-btn">Purchase Order
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="PurchaseOrder/PurchaseOrder.htm">Purchase Order Home</a>
+    <a href="PurchaseOrder/PurchaseOrder.AddPurchaseOrder.htm">Add Purchase Order</a>
+    <a href="PurchaseOrder/PurchaseOrder.AddPurchaseOrderLineItem.htm">Add Line Item</a>
+    <a href="PurchaseOrder/PurchaseOrder.AddVIMMaster.htm">Add VIM Master</a>
+    <a href="PurchaseOrder/PurchaseOrder.AddVIMMiscCharge.htm">Add VIM Charge</a>
+    <a href="PurchaseOrder/PurchaseOrder.DeletePurchaseOrderLineItem.htm">Delete Line Item</a>
+    <a href="PurchaseOrder/PurchaseOrder.PostVIMRequest.htm">Poast VIM Request</a>
+    <a href="PurchaseOrder/PurchaseOrder.ReconcileVIMDetail.htm">Reconcile VIM</a>
+    <a href="PurchaseOrder/PurchaseOrder.ReconcileVIMDetailPayment.htm">Reconcile VIM Payment</a>
+    <a href="PurchaseOrder/PurchaseOrder.ReconcileVIMMiscCharge.htm">Reconcile VIM Charge</a>
+    <a href="PurchaseOrder/PurchaseOrder.SelectPurchaseOrder.htm">Select Purchase Order</a>
+    <a href="PurchaseOrder/PurchaseOrder.SelectPurchaseOrderLineItem.htm">Select Line Item</a>
+    <a href="PurchaseOrder/PurchaseOrder.SelectVIMDetail.htm">Select VIM</a>
+    <a href="PurchaseOrder/PurchaseOrder.SelectVIMDetailPayment.htm">Select VIM Payment</a>
+    <a href="PurchaseOrder/PurchaseOrder.SelectVIMMaster.htm">Select VIM Master</a>
+    <a href="PurchaseOrder/PurchaseOrder.SelectVIMMiscCharge.htm">Select VIM Charge</a>
+    <a href="PurchaseOrder/PurchaseOrder.UpdatePurchaseOrder.htm">Update Purchase Order</a>
+    <a href="PurchaseOrder/PurchaseOrder.UpdatePurchaseOrderLineItem.htm">Update Line Item</a>
+    <a href="PurchaseOrder/PurchaseOrder.UpdateVIMDetail.htm">Update VIM</a>
+    <a href="PurchaseOrder/PurchaseOrder.UpdateVIMDetailPayment.htm">Update VIM Payment</a>
+    <a href="PurchaseOrder/PurchaseOrder.UpdateVIMMaster.htm">Update VIM Master</a>
+    <a href="PurchaseOrder/PurchaseOrder.UpdateVIMMiscCharge.htm">Update VIM Charge</a>
+    <a href="PurchaseOrder/PurchaseOrder.VIMLoadPurchaseOrderLineItemRequest.htm">VIM Line Item</a>
+    <a href="PurchaseOrder/PurchaseOrder.VIMLoadPurchaseOrderRequest.htm">VIM Purchase Order</a>
+  </div>
+
+  <button class="dropdown-btn">Receiving
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="Receiving/Receiving.htm">Receiving Home</a>
+    <a href="Receiving/Receiving.AddHoldCode.htm">Add Hold Code</a>
+    <a href="Receiving/Receiving.AddOrUpdateHoldCode.htm">Update Hold Code</a>
+    <a href="Receiving/Receiving.ClearHoldCodes.htm">Clear Hold Code</a>
+    <a href="Receiving/Receiving.CreateUnexpectedReceipt.htm">Create Receipt</a>
+    <a href="Receiving/Receiving.DeleteHoldCode.htm">Delete Hold Code</a>
+    <a href="Receiving/Receiving.EditReceivedPart.htm">Edit Part</a>
+    <a href="Receiving/Receiving.InspectReceiptAccept.htm">Receipt Accept</a>
+    <a href="Receiving/Receiving.InspectReceiptDispose.htm">Receipt Dispose</a>
+    <a href="Receiving/Receiving.InspectReceiptReturn.htm">Receipt Return</a>
+    <a href="Receiving/Receiving.ReceivePart.htm">Receive Part</a>
+    <a href="Receiving/Receiving.SelectHoldCode.htm">Secelt Hold Code</a>
+    <a href="Receiving/Receiving.UndeleteHoldCode.htm">Recover Hold Code</a>
+    <a href="Receiving/Receiving.UpdateHoldCode.htm">Update Hold Code</a>
+  </div>
+
+  <button class="dropdown-btn">Sales Invoice
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="SalesInvoice/SalesInvoice.htm">Sales Invoice Home</a>
+    <a href="SalesInvoice/SalesInvoice.AddInvoiceDetail.htm">Add Detail</a>
+    <a href="SalesInvoice/SalesInvoice.AddInvoiceMaster.htm">Add Master</a>
+    <a href="SalesInvoice/SalesInvoice.AddOrUpdateInvoiceDetail.htm">Update Detail</a>
+    <a href="SalesInvoice/SalesInvoice.AddOrUpdateInvoiceDetailTaxCreditRequest.htm">Update Tax Credit</a>
+    <a href="SalesInvoice/SalesInvoice.AddOrUpdateInvoiceMaster.htm">Update Master</a>
+    <a href="SalesInvoice/SalesInvoice.CloseInvoice.htm">Close Invoice</a>
+    <a href="SalesInvoice/SalesInvoice.PostInvoice.htm">Post Invoice</a>
+    <a href="SalesInvoice/SalesInvoice.SelectInvoiceDetail.htm">Select Detail</a>
+    <a href="SalesInvoice/SalesInvoice.SelectInvoiceMaster.htm">Select Master</a>
+    <a href="SalesInvoice/SalesInvoice.UpdateInvoiceDetail.htm">Update Detail</a>
+    <a href="SalesInvoice/SalesInvoice.UpdateInvoiceMaster.htm">Update Master</a>
+  </div>
+  
+  <button class="dropdown-btn">Sales Order
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="SalesOrder/SalesOrder.htm">Sales Order Home</a>
+    <a href="SalesOrder/SalesOrder.AddSalesOrderDetail.htm">Add Detail</a>
+    <a href="SalesOrder/SalesOrder.AddSalesOrderDetailCharge.htm">Add Charge</a>
+    <a href="SalesOrder/SalesOrder.AddSalesOrderHeader.htm">Add Header</a>
+    <a href="SalesOrder/SalesOrder.CreateSalesInvoice.htm">Create Invoice</a>
+    <a href="SalesOrder/SalesOrder.SelectSalesOrderDetail.htm">Select Detail</a>
+    <a href="SalesOrder/SalesOrder.SelectSalesOrderHeader.htm">Select Header</a>
+    <a href="SalesOrder/SalesOrder.UpdateSalesOrderDetail.htm">Update Detail</a>
+    <a href="SalesOrder/SalesOrder.UpdateSalesOrderDetailCharge.htm">Update Charge</a>
+    <a href="SalesOrder/SalesOrder.UpdateSalesOrderHeader.htm">Update Header</a>
+    <a href="SalesOrder/SalesOrder.VoidSalesOrderHeader.htm">Void Header</a>
+  </div>
+
+  <button class="dropdown-btn">Session
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="Session/Session.htm">Session Home</a>
+    <a href="Session/Session.Login.htm">Session Login</a>
+    <a href="Session/Session.Logout.htm">Session Logout</a>
+  </div>
+  
+  <button class="dropdown-btn">Shipping
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="Shipping/Shipping.htm">Shipping Home</a>
+    <a href="Shipping/Shipping.BatchDeliverPart.htm">Batch Deliver</a>
+    <a href="Shipping/Shipping.BatchShipPart.htm">Batch Ship</a>
+    <a href="Shipping/Shipping.CreateDelivery.htm">Create Delivery</a>
+    <a href="Shipping/Shipping.CreateShipment.htm">Create Shipment</a>
+    <a href="Shipping/Shipping.DeliverPart.htm">Deliver Part</a>
+    <a href="Shipping/Shipping.GetExpectedDeliveryRequest.htm">Get Delivery</a>
+    <a href="Shipping/Shipping.GetExpectedShipmentRequest.htm">Get Shipment</a>
+    <a href="Shipping/Shipping.ShipPart.htm">Ship Part</a>
+    <a href="Shipping/Shipping.UpdateDeliveredPart.htm">Update Delivered Part</a>
+    <a href="Shipping/Shipping.UpdateDeliveryPickTicket.htm">Update Delivery Ticket</a>
+    <a href="Shipping/Shipping.UpdatePartToBeDelivered.htm">Update Undelivered Part</a>
+    <a href="Shipping/Shipping.UpdatePartToBeShipped.htm">Update Unshipped Part</a>
+    <a href="Shipping/Shipping.UpdateShippedPart.htm">Update Shipped Part</a>
+  </div>
+
+  <button class="dropdown-btn">System
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="System/SystemService.htm">System Home</a>
+    <a href="System/SystemService.AddAircraftModel.htm">Add Aircraft Model</a>
+    <a href="System/SystemService.AddOrUpdateAircraftModel.htm">Update Aircraft Model</a>
+    <a href="System/SystemService.AddOrUpdateCurrencyExchangeRate.htm">Update Exchange Rate</a>
+    <a href="System/SystemService.AddOrUpdateTaxClass.htm">Update Tax Class</a>
+    <a href="System/SystemService.AddTaxAuthority.htm">Add Tax Authority</a>
+    <a href="System/SystemService.AddTaxClass.htm">Add Tax Class</a>
+    <a href="System/SystemService.AddTaxCode.htm">Add Tax Code</a>
+    <a href="System/SystemService.AddTaxCodeAuthority.htm">Add Tax Code Authority</a>
+    <a href="System/SystemService.DeleteAircraftModel.htm">Delete Aircraft Model</a>
+    <a href="System/SystemService.DeleteTaxAuthority.htm">Delete Tax Authority</a>
+    <a href="System/SystemService.DeleteTaxClass.htm">Delete Tax Class</a>
+    <a href="System/SystemService.DeleteTaxCode.htm">Delete Tax Code</a>
+    <a href="System/SystemService.DeleteTaxCodeAuthority.htm">Delete Tax Code Authority</a>
+    <a href="System/SystemService.EditTaxAuthority.htm">Edit Tax Authority</a>
+    <a href="System/SystemService.EditTaxCode.htm">Edit Tax Code</a>
+    <a href="System/SystemService.GetUserDefinedFieldMetaData.htm">Get Meta Data</a>
+    <a href="System/SystemService.SelectAircraftModel.htm">Select Aircraft Model</a>
+    <a href="System/SystemService.SelectCurrencyExchangeRate.htm">Select Exchange Rate</a>
+    <a href="System/SystemService.SelectTaxClass.htm">Select Tax Class</a>
+    <a href="System/SystemService.UnDeleteTaxAuthority.htm">Recover Tax Authority</a>
+    <a href="System/SystemService.UnDeleteTaxClass.htm">Recover Tax Class</a>
+    <a href="System/SystemService.UndeleteAircraftModel.htm">Recover Aircraft Model</a>
+    <a href="System/SystemService.UpdateAircraftModel.htm">Update Aircraft Model</a>
+    <a href="System/SystemService.UpdateTaxClass.htm">Update Tax Class</a>
+  </div>
+  
+  <button class="dropdown-btn">User Management
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="UserManagement/UserManagement.htm">User Management Home</a>
+    <a href="UserManagement/UserManagement.AddOrEditUserRequest.htm">Add/Edit Request</a>
+    <a href="UserManagement/UserManagement.AddUser.htm">Add User</a>
+    <a href="UserManagement/UserManagement.ChangeUserPassword.htm">User Password</a>
+    <a href="UserManagement/UserManagement.CreatePermissionsProfile.htm">User Management</a>
+    <a href="UserManagement/UserManagement.GetUser.htm">Get User</a>
+    <a href="UserManagement/UserManagement.UpdateUser.htm">Update User</a>
+  </div>
+
+  
+  <button class="dropdown-btn">Vendor Quote
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="VendorQuote/VendorQuote.htm">Vendor Quote Home</a>
+    <a href="VendorQuote/VendorQuote.RequestToAddVendorQuote.htm">Add Vendor Quote</a>
+    <a href="VendorQuote/VendorQuote.RequestToSelectVendorQuote.htm">Select Vendor Quote</a>
+    <a href="VendorQuote/VendorQuote.RequestToUpdateVendorQuote.htm">Update Vendor Quote</a>
+  </div>
+
+  
+  <a href="WorkOrder/WorkOrder.htm">Work Order</a>
+
+  
+  <button class="dropdown-btn">Work order Quote
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="WorkOrderQuote/WorkOrderQuote.htm">Work Order Quote Home</a>
+    <a href="WorkOrderQuote/WorkOrderQuote.ApproveWorkOrderQuote.htm">Approve Quote</a>
+    <a href="WorkOrderQuote/WorkOrderQuote.RejectWorkORderQuote.htm">Reject Quote</a>
+    <a href="WorkOrderQuote/WorkOrderQuote.UnapproveWorkOrderQuote.htm">Unapprove Quote</a>
+    <a href="WorkOrderQuote/WorkOrderQuote.UnrejectWorkOrderQuote.htm">Unreject Quote</a>
+  </div>
+  
+  <a href="WorkPak/WorkPak.htm">Work Pak</a>
+  <a href="#">_</a>
+</div>
+
+   
+</body>
+
 <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");
